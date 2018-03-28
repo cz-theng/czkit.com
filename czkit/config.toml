@@ -1,0 +1,8 @@
+baseURL = "http://czkit.com/"
+languageCode = "zh-cn"
+title = "CZKit"
+theme = "hyde-hyde"
+[params]
+    Subtitle = "Game & Golang"
+    AuthorName = "CZ"
+    GitHubUser = "cz-it"
