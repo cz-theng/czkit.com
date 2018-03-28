@@ -18,7 +18,19 @@ theme = "hyde-hyde"
 	url = "/posts/"
 
 [[menu.main]]
+	name = "Category"
+	weight = 200
+	identifier = "categories"
+	url = "/categories/"
+
+[[menu.main]]
+	name = "Tags"
+	weight = 300
+	identifier = "tags"
+	url = "/tags/"
+
+[[menu.main]]
 	name = "About"
 	identifier = "about"
-	weight = 200
+	weight = 400
 	url = "/about.html"
