@@ -1,4 +1,4 @@
-baseURL = "http://czkit.com/"
+baseURL = "http://www.czkit.com/"
 languageCode = "zh-cn"
 title = "CZKit"
 theme = "hyde-hyde"
@@ -21,4 +21,4 @@ theme = "hyde-hyde"
 	name = "About"
 	identifier = "about"
 	weight = 200
-	url = "/about/"
+	url = "/about.html"

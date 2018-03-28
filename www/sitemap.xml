@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://czkit.com/</loc>
+    <loc>http://www.czkit.com/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://czkit.com/categories/</loc>
+    <loc>http://www.czkit.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://czkit.com/tags/</loc>
+    <loc>http://www.czkit.com/tags/</loc>
     <priority>0</priority>
   </url>
   
