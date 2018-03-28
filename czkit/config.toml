@@ -2,7 +2,23 @@ baseURL = "http://czkit.com/"
 languageCode = "zh-cn"
 title = "CZKit"
 theme = "hyde-hyde"
+
 [params]
-    Subtitle = "Game & Golang"
-    AuthorName = "CZ"
-    GitHubUser = "cz-it"
+    description = "Game & Golang"
+    author = "CZ"
+	authorimage = "/images/logo.png"
+
+[params.social]
+	github = "cz-it"
+
+[[menu.main]]
+	name = "Posts"
+	weight = 100
+	identifier = "posts"
+	url = "/posts/"
+
+[[menu.main]]
+	name = "About"
+	identifier = "about"
+	weight = 200
+	url = "/about/"
