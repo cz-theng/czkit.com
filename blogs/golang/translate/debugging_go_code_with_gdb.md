@@ -1,6 +1,6 @@
 # Debugging Go Code with GDB [译]
 
->> 一篇很老的文章，最近翻来看，好像也没人翻译，随手翻译一遍，文章来自[Golang's Blog](https://golang.google.cn/doc/gdb)
+> 一篇很老的文章，最近翻来看，好像也没人翻译，随手翻译一遍，文章来自[Golang's Blog](https://golang.google.cn/doc/gdb)
 
 以下说明适用于Golang的标准工具链（Go编译器如gc以及其他工具），GccGo有他自己的gdb支持。
 
@@ -64,7 +64,7 @@ GDB最新的扩展机制可以让它加载指定二进制文件中的扩展脚�
         (gdb) p $dtype(var)
         (gdb) iface var
 
->> 如果接口的长名称不同于短名称，GDB就无法动态的找到接口值的类型。
+> 如果接口的长名称不同于短名称，GDB就无法动态的找到接口值的类型。
 
 * 查看goroutines:
 

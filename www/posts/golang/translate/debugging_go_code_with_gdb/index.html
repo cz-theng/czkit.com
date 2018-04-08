@@ -128,12 +128,8 @@
       </span>  
   </div>    
   
-  
-
-<blockquote>
-<blockquote>
+  <blockquote>
 <p>一篇很老的文章，最近翻来看，好像也没人翻译，随手翻译一遍，文章来自<a href="https://golang.google.cn/doc/gdb">Golang&rsquo;s Blog</a></p>
-</blockquote>
 </blockquote>
 
 <p>以下说明适用于Golang的标准工具链（Go编译器如gc以及其他工具），GccGo有他自己的gdb支持。</p>
@@ -143,6 +139,8 @@
 <p>GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。</p>
 
 <p>所以，下面的篇幅只是当你用GDB时候的一个指引，但是并不保证一定成功。除此之外，还可以参考<a href="https://sourceware.org/gdb/current/onlinedocs/gdb/">GDB手册</a></p>
+
+<p></p>
 
 <h2 id="简介">简介</h2>
 
@@ -210,9 +208,7 @@
 </ul>
 
 <blockquote>
-<blockquote>
 <p>如果接口的长名称不同于短名称，GDB就无法动态的找到接口值的类型。</p>
-</blockquote>
 </blockquote>
 
 <ul>
@@ -488,7 +484,6 @@ $26 = (struct regexp.inputBytes *) 0xf8400b4930
 (gdb) iface i
 regexp.input: struct regexp.inputBytes *
 </code></pre>
-
 </div>
             <div class="footer">
                 
