@@ -2,13 +2,13 @@
 
 >> 一篇很老的文章，最近翻来看，好像也没人翻译，随手翻译一遍，文章来自[Golang's Blog](https://golang.google.cn/doc/gdb)
 
-以下说明适用于Golang的标准工具链（Go编译器如GC以及其他工具），GccGo有他自己的gdb支持。
+以下说明适用于Golang的标准工具链（Go编译器如gc以及其他工具），GccGo有他自己的gdb支持。
 
 需要注意的是，对于使用标准工具链构建的Golang来说[Delve](https://github.com/derekparker/delve)相比如GDB是一个更好的选择，Delve可以更好的理解Go的运行时、数据结构以及表达式等。当前Delve可以支持Linux、OSX以及arm64平台下的Windows，最新能支持的平台列表参见[Delve的文档](https://github.com/derekparker/delve/tree/master/Documentation/installation)
 
 GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。
 
-所以，下面的篇幅只是当你用GDB时候的一个指引，但是不不保证一定成功。除此之外，还可以参考[GDB手册](https://sourceware.org/gdb/current/onlinedocs/gdb/)
+所以，下面的篇幅只是当你用GDB时候的一个指引，但是并不保证一定成功。除此之外，还可以参考[GDB手册](https://sourceware.org/gdb/current/onlinedocs/gdb/)
 
 ## 简介
 当在Linux/Mac OS X/FreeBSD 或者NetBSD等系统上通过gc工具链编译Go程序构建出来的二进制文件包含了 DWARFv4 调试信息可以用于GDB(需要版本大于等于7.5）调试一个运行中的进程或者Core文件。
@@ -134,7 +134,7 @@ GDB最新的扩展机制可以让它加载指定二进制文件中的扩展脚�
     (gdb) l regexp.go:1
     (gdb) # Hit enter to repeat last command. Here, this lists next 10 lines.
 
-## 命名
+### 命名
 函数名和变量名必须要加上其所在包的包名。regexp包中的额函数"Compile"在GDB中需要写成"regexp.Compile"。
 
 方法名必须要加上他的类的类型。比如"* Regexp"类型的 "String" 方法要写成 "regexp.(*Regexp).String"。
