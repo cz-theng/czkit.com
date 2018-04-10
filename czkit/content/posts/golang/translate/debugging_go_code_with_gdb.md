@@ -19,9 +19,12 @@ description: "当在Linux/Mac OS X/FreeBSD 或者NetBSD等系统上通过gc工�
 
 GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。
 
+<!--more-->
+
+
 所以，下面的篇幅只是当你用GDB时候的一个指引，但是并不保证一定成功。除此之外，还可以参考[GDB手册](https://sourceware.org/gdb/current/onlinedocs/gdb/)
 
-<!--more-->
+
 
 ## 简介
 当在Linux/Mac OS X/FreeBSD 或者NetBSD等系统上通过gc工具链编译Go程序构建出来的二进制文件包含了 DWARFv4 调试信息可以用于GDB(需要版本大于等于7.5）调试一个运行中的进程或者Core文件。
