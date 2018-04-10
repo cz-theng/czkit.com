@@ -6,6 +6,7 @@
     <description>Recent content on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.czkit.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>Debugging Go Code with GDB [译]</title>
       <link>http://www.czkit.com/posts/golang/translate/debugging_go_code_with_gdb/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.czkit.com/posts/golang/translate/debugging_go_code_with_gdb/</guid>
       <description>&lt;blockquote&gt;
@@ -29,6 +30,15 @@
 &lt;p&gt;所以，下面的篇幅只是当你用GDB时候的一个指引，但是并不保证一定成功。除此之外，还可以参考&lt;a href=&#34;https://sourceware.org/gdb/current/onlinedocs/gdb/&#34;&gt;GDB手册&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Abc</title>
+      <link>http://www.czkit.com/posts/abc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/abc/</guid>
+      <description>asfsafsdfsd</description>
     </item>
     
   </channel>

@@ -1,6 +1,6 @@
 ---
 title: "Debugging Go Code with GDB [译]"
-date: Mon Apr 8, 2018
+date: 2018-04-08
 categories:
   - "golang"
 tags:

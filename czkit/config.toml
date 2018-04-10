@@ -7,7 +7,8 @@ theme = "hyde-hyde"
     description = "Game & Golang"
     author = "CZ"
 	authorimage = "/images/logo.png"
-    DateForm = "Mon Jan 2, 2006"
+	dateformat="2016-01-02"
+
 
 [params.social]
 	github = "cz-it"
