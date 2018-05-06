@@ -198,40 +198,67 @@ $ go get -u github.com/derekparker/delve/cmd/dlv
 
 就可以调试这个目录下的单元测试代码，即"_test.go"的代码。同样如果传递一个包目录，就会执行指定目录下的test. 而`dlv trace`则是执行trace代码。
 
+比如我们到Golang的源码目录下的string包:
+
+    cd $GOROOT/src/strings
+
+让后执行：
+
+        [cz@air_11:strings]$dlv test
+        Type 'help' for list of commands.
+        (dlv) funcs ExampleToUpper
+        strings_test.ExampleToUpper
+        (dlv) b strings_test.ExampleToUpper
+        Breakpoint 1 set at 0x1150fe8 for strings_test.ExampleToUpper() ./example_test.go:270
+        (dlv) c
+        > strings_test.ExampleToUpper() ./example_test.go:270 (hits goroutine(1):1 total:1) (PC: 0x1150fe8)
+        Warning: debugging optimized function
+           265:		r := strings.NewReplacer("<", "&lt;", ">", "&gt;")
+           266:		fmt.Println(r.Replace("This is <b>HTML</b>!"))
+           267:		// Output: This is &lt;b&gt;HTML&lt;/b&gt;!
+           268:	}
+           269:
+        => 270:	func ExampleToUpper() {
+           271:		fmt.Println(strings.ToUpper("Gopher"))
+           272:		// Output: GOPHER
+           273:	}
+           274:
+           275:	func ExampleToLower() {
+        (dlv)
 
 
-## 使用vim 插件
-除了在命令行里执行，Delve还提供了诸多主流编辑器的Debug插件，帮你改造你的IDE。
+这里可以看到是在测试代码的`ExampleToUpper`函数中断了下来，我们来调试字符串中转换大写的源码。
 
-这里示例Vim的插件。在Delve文档中Vim插件有三个，详见[文档](https://github.com/derekparker/delve/blob/master/Documentation/EditorIntegration.md)。这里选择了[Vim-Delve](https://github.com/sebdah/vim-delve)。
+这里一路"s"下去（split)，会看到，最终执行了：
 
-因为我是用的Vundle管理Vim插件，所以在vimrc里面增加：
+        (dlv) s
+        > strings.Map() ./strings.go:518 (PC: 0x10e2aad)
+        Warning: debugging optimized function
+           513:		var b []byte
+           514:		// nbytes is the number of bytes encoded in b.
+           515:		var nbytes int
+           516:
+           517:		for i, c := range s {
+        => 518:			r := mapping(c)
+           519:			if r == c {
+           520:				continue
+           521:			}
+           522:
+           523:			b = make([]byte, len(s)+utf8.UTFMax)
+        (dlv) p c
+        71
 
-    Plugin 'Shougo/vimshell'
-    Plugin 'Shougo/vimproc'
-    Plugin 'sebdah/vim-delve'
+可以看到string包源码中，最终是将"Gopher"中的每个字符去到`mapping`函数中找到其对应的大写字母，这里打印第一个字符c为71也就是ASCII表示的"G"，查表得到为其本身。这样我们就可以单步的去看
+Golang标准库源码了。
 
-然后执行:
+当然，除了指定debug二进制文件，Delve还和gdb一样可以attach到一个正在运行的进程上面，使用：
 
-    :BundleInstall
+    dlv attach pid 
 
-即可完成安装。
+以及加载一个coredump文件：
 
-Command	| 意义
----|---
-DlvAddBreakpoint |	设置断点
-DlvAddTracepoint |	在这一行设置tracepoint 
-DlvAttach <pid> [flags] | 	Attach 到一个运行中的程序
-DlvClearAll	| 清楚所有断点
-DlvCore <bin> <dump> [flags] |  调试CoreDump
-DlvDebug [flags] | 对应Debug命令，Debug 程序
-DlvExec <bin> [flags] | 对应exec命令
-DlvRemoveBreakpoint	| 清除这一行的断点
-DlvRemoveTracepoint	| 清除这一行的 tracepoint
-DlvTest [flags]	 | 对应test命令
-DlvToggleBreakpoint	 | 设置或者取消当行断点
-DlvToggleTracepoint	 | 设置或者取消一个tracepoint 
+    dlv core <executable> <core>
 
-在Vim中可以通过上面的命令随意设置断点和清除断点。然后通过"DlvDebug"或其他命令开始调试。
+这个操作起来和gdb基本没有任何区别。
 
-Vim-Delve会新建一个shell回话执行Delve命令，就和在普通的shell里面执行一样。
+
