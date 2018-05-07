@@ -11,8 +11,6 @@ description: "Delve更适合于Golang程序的Debug操作，为了这句官方�
 ---
 
 
-#
-
 Golang在其官方[文档](https://golang.google.cn/doc/gdb) 说明
 
 > Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.

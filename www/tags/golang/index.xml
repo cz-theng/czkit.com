@@ -17,9 +17,7 @@
       <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://www.czkit.com/posts/golang/debug/delve_try/</guid>
-      <description>&lt;p&gt;#&lt;/p&gt;
-
-&lt;p&gt;Golang在其官方&lt;a href=&#34;https://golang.google.cn/doc/gdb&#34;&gt;文档&lt;/a&gt; 说明&lt;/p&gt;
+      <description>&lt;p&gt;Golang在其官方&lt;a href=&#34;https://golang.google.cn/doc/gdb&#34;&gt;文档&lt;/a&gt; 说明&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.&lt;/p&gt;
