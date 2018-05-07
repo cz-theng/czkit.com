@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>http://www.czkit.com/posts/golang/mock/test_with_gomock/</loc>
+    <lastmod>2017-08-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.czkit.com/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -53,6 +58,12 @@
   <url>
     <loc>http://www.czkit.com/categories/golang/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.czkit.com/tags/mock/</loc>
+    <lastmod>2017-08-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

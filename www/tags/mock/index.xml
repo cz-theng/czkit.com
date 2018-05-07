@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mock on CZKit</title>
+    <link>http://www.czkit.com/tags/mock/</link>
+    <description>Recent content in Mock on CZKit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 22 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.czkit.com/tags/mock/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Golang的官方mock工具--gomock</title>
+      <link>http://www.czkit.com/posts/golang/mock/test_with_gomock/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/mock/test_with_gomock/</guid>
+      <description>&lt;p&gt;在Golang的官方Repo(&lt;a href=&#34;https://github.com/golang/)中有一个单独的工程叫&amp;quot;mock&amp;quot;(https://github.com/golang/mock),虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&#34;&gt;https://github.com/golang/)中有一个单独的工程叫&amp;quot;mock&amp;quot;(https://github.com/golang/mock),虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;不同场景mock的对象互相不同，那么gomock主要是mock哪些内容呢？&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;mockgen has two modes of operation: source and reflect. Source mode generates mock interfaces from a source file.
+Reflect mode generates mock interfaces by building a program that uses reflection to understand interfaces.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
