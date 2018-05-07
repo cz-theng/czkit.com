@@ -11,7 +11,7 @@ description: "在Golang的官方,虽然star不是特别多，但它却是Golang�
 ---
 
 
-在Golang的官方Repo(https://github.com/golang/)中有一个单独的工程叫"mock"(https://github.com/golang/mock),虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。
+在Golang的官方Repo(https://github.com/golang/) 中有一个单独的工程叫"mock"(https://github.com/golang/mock) ,虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。
 
 不同场景mock的对象互相不同，那么gomock主要是mock哪些内容呢？
 
@@ -34,7 +34,7 @@ gomock主要包含两个部分：" gomock库"和“ 辅助代码生成工具mock
 如何你设置过$GOPATH/bin到你的$PATH变量中，那么这里就可以直接运行mockgen命令了，否则需要使用绝对路径或者相当于$GOPATH的目录。
 
 ## 示例
-gomock的repo中带了一个官方的例子,但是这个例子过于强大和丰富，反而不适合尝鲜，下面我们写个我们自己的例子(https://github.com/cz-it/czkit.com/tree/master/blogs/golang/testing/gmock/example)，一个获取当前Golang最新版本的例子：
+gomock的repo中带了一个官方的例子,但是这个例子过于强大和丰富，反而不适合尝鲜，下面我们写个我们自己的例子(https://github.com/cz-it/czkit.com/tree/master/blogs/golang/testing/gmock/example) ，一个获取当前Golang最新版本的例子：
 
 
     tree .
@@ -52,7 +52,7 @@ gomock的repo中带了一个官方的例子,但是这个例子过于强大和丰
 	    GetBody() string
     }
 
-这里假设接口`GetBody`直接可以抓取"https://golang.org"首页的“Build version”字段来得到当前Golang发布出来的版本。
+这里假设接口`GetBody`直接可以抓取"https://golang.org" 首页的“Build version”字段来得到当前Golang发布出来的版本。
 
 这里在go_version.go中对这个接口进行使用：
 

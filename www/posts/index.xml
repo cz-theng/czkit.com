@@ -90,7 +90,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
       <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>http://www.czkit.com/posts/golang/mock/test_with_gomock/</guid>
-      <description>&lt;p&gt;在Golang的官方Repo(&lt;a href=&#34;https://github.com/golang/)中有一个单独的工程叫&amp;quot;mock&amp;quot;(https://github.com/golang/mock),虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&#34;&gt;https://github.com/golang/)中有一个单独的工程叫&amp;quot;mock&amp;quot;(https://github.com/golang/mock),虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;在Golang的官方Repo(&lt;a href=&#34;https://github.com/golang/&#34;&gt;https://github.com/golang/&lt;/a&gt;) 中有一个单独的工程叫&amp;rdquo;mock&amp;rdquo;(&lt;a href=&#34;https://github.com/golang/mock&#34;&gt;https://github.com/golang/mock&lt;/a&gt;) ,虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&lt;/p&gt;
 
 &lt;p&gt;不同场景mock的对象互相不同，那么gomock主要是mock哪些内容呢？&lt;/p&gt;
 
