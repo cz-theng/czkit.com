@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on CZKit</title>
+    <link>http://www.czkit.com/categories/vim/</link>
+    <description>Recent content in Vim on CZKit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.czkit.com/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golang With Vim</title>
+      <link>http://www.czkit.com/posts/vim/vim_golang/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/vim/vim_golang/</guid>
+      <description>&lt;p&gt;在很久以前的官网&lt;a href=&#34;https://golang.org/&#34;&gt;golang.org&lt;/a&gt;上是有一段视频的。视频里面正是用了Vim作为编辑器。
+从Golang出生时，就有人为Vim好Emacs写了扩展插件。当然现在的Sublime/VSCode/Atom都可以很方便的配置成
+一款顺手的Golang开发工具。&lt;/p&gt;
+
+&lt;p&gt;因为经历的原因，我是从Vim到Emacs现在又回到Vim。发现Vim的Golang环境配置已经被大神们整的这么Easy，最开始用
+Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&gt;上面找插件，然后自己放到.vim目录下，在写vimrc，稍稍不注意
+就会弄的vim起来一堆错误。而今，有了&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; 和&lt;a href=&#34;https://github.com/tpope/vim-pathogen&#34;&gt;Pathogen&lt;/a&gt;这样的插件管理神器，可以让小白用户快速的配置好各种插件。所以只要会Vim基本使用
+，就可以很快的使用Vim来写Golang。&lt;/p&gt;
+
+&lt;p&gt;自从2006年发布了Vim7以来，直到2016年，时隔10年，Vim终于发布了Vim8，新的Vim汲取了NeoVim一些新的特性，总的
+来说建议过度到Vim8上，另外目前MacOS默认的Vim7.3，所以需要自己装一下，可以使用二进制编译安装或者直接使用&lt;a href=&#34;https://github.com/macvim-dev/macvim&#34;&gt;MacVim&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下面假定是重新安装的Vim，没有经过其他配置。Vim的用户配置文件在&lt;code&gt;~/.vimrc&lt;/code&gt; ,一些插件和其他附加文件在&lt;code&gt;~/.vim&lt;/code&gt;
+目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,29 @@
     <description>Recent content in Golang on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.czkit.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debug Golang With Delve</title>
+      <link>http://www.czkit.com/posts/golang/debug/delve_try/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/debug/delve_try/</guid>
+      <description>&lt;p&gt;#&lt;/p&gt;
+
+&lt;p&gt;Golang在其官方&lt;a href=&#34;https://golang.google.cn/doc/gdb&#34;&gt;文档&lt;/a&gt; 说明&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Debugging Go Code with GDB [译]</title>

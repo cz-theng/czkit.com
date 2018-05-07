@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Enable responsiveness on mobile devices --> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    
+    	
+    <meta name="generator" content="Hugo 0.37.1" />
+    
+    <title>Debug Golang With Delve &middot; CZKit</title>
+    <meta content="Debug Golang With Delve - CZKit" property="og:title">
+    <meta content=" - Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。" property="og:description">    
+    <!-- CSS --> 
+    <link rel="stylesheet" href="http://www.czkit.com/css/print.css" media="print">
+    <link rel="stylesheet" href="http://www.czkit.com/css/poole.css">
+    <link rel="stylesheet" href="http://www.czkit.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+    <!-- Customised CSS -->
+    <link rel="stylesheet" href="http://www.czkit.com/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+	</head>
+    <body>
+        <div class="sidebar">
+	<div class="container text-center sidebar-sticky">
+		<div class="sidebar-about text-center">			
+			 <img src="/images/logo.png" alt="Author Image" class="img-circle headshot center"> 
+			<a href="http://www.czkit.com/"><h1 class="brand">CZKit</h1></a>
+			<p class="lead">
+				 Game &amp; Golang 
+			</p>
+		</div>
+		
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/posts/"> <span>Posts</span></a>
+				</li>
+				<li>
+					<a href="/categories/"> <span>Category</span></a>
+				</li>
+				<li>
+					<a href="/tags/"> <span>Tags</span></a>
+				</li>
+				<li>
+					<a href="/about.html"> <span>About</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+        <p>
+		<section class="row text-center">
+	
+	
+	
+	&nbsp;<a href="https://github.com/cz-it"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	&nbsp;<a href="mailto:czkit.theng@gmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+        </p>
+		<p class="copyright">&copy; 2018 CZ
+        <a href="https://creativecommons.org/licenses/by/4.0"> &copy CZKit.com </a>.<br/>Built with <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+        </p>
+	</div>
+	<div>
+	</div>
+</div>
+
+        <div class="content container">
+            <div class="post">
+  <h1>Debug Golang With Delve</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       <i class="fa fa-calendar" aria-hidden="true"></i> 3056-05-03 
+      
+      
+        
+        
+            in
+            
+            
+                <a class="meta" href="/categories/golang">GOLANG</a>
+                
+            
+        
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fa fa-tags" aria-hidden="true"></i>
+            
+            <a class="meta" href="/tags/debug">debug</a> 
+        
+            <a class="meta" href="/tags/golang">golang</a>
+        
+      
+      
+      </span>  
+  </div>    
+  
+  <p>#</p>
+
+<p>Golang在其官方<a href="https://golang.google.cn/doc/gdb">文档</a> 说明</p>
+
+<blockquote>
+<p>Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.</p>
+</blockquote>
+
+<p>相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。</p>
+
+<p></p>
+
+<h2 id="安装">安装</h2>
+
+<p>安装Delve可以参考<a href="https://github.com/derekparker/delve/tree/master/Documentation/installation">官方文档</a>,这里以Mac为例。</p>
+
+<p>首先确保xcode以及其插件已经安装好：</p>
+
+<pre><code>xcode-select --install
+</code></pre>
+
+<p>Delve本身也是用Golang写的，所以接着通过<code>go get</code>安装Delve。</p>
+
+<p>$ go get -u github.com/derekparker/delve/cmd/dlv</p>
+
+<p>安装好之后，通过</p>
+
+<pre><code>dlv version
+</code></pre>
+
+<p>可以看到当前版本号：</p>
+
+<pre><code>[cz@air_11:delve]$dlv version
+Delve Debugger
+Version: 1.0.0
+Build: 8ce88095c6ea40a1d10ac2e07b7ce950f6dfaa2f
+</code></pre>
+
+<h2 id="调试程序">调试程序</h2>
+
+<p>现在开始写个简单求和程序</p>
+
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func sum(a, b int) int {
+    s := a + b
+    return s
+}
+
+func main() {
+    s := sum(1, 2)
+    fmt.Printf(&quot;1 + 2 = %d \n&quot;, s)
+}
+</code></pre>
+
+<p>在代码目录下执行：</p>
+
+<pre><code>dlv debug
+</code></pre>
+
+<p>看到：</p>
+
+<pre><code>[cz@air_11:delve]$dlv debug
+Type 'help' for list of commands.
+(dlv)
+</code></pre>
+
+<p>进入到debug界面，这里基本和<code>gdb abc_exe</code>一样。这里会自动编译当前目录中的main包并类似gcc一样加上<code>-g</code>选项。</p>
+
+<p>首先在main函数的地方设个断点：</p>
+
+<pre><code>(dlv) b main.main
+Breakpoint 1 set at 0x10b4228 for main.main() ./main.go:18
+</code></pre>
+
+<p>然后，执行到该断点：</p>
+
+<pre><code>(dlv) c
+&gt; main.main() ./main.go:18 (hits goroutine(1):1 total:1) (PC: 0x10b4228)
+Warning: debugging optimized function
+    13: func sum(a, b int) int {
+    14:     s := a + b
+    15:     return s
+    16: }
+    17:
+=&gt;  18: func main() {
+    19:     s := sum(1, 2)
+    20:     fmt.Printf(&quot;1 + 2 = %d \n&quot;, s)
+    21: }
+</code></pre>
+
+<p>这里&rdquo;b&rdquo;是&rdquo;break&rdquo;的缩写，&rdquo;c&rdquo;是&rdquo;continue&rdquo; 的缩写。如果熟悉GDB（做后台的别说不熟悉）这里会
+有点不同，这里没有&rdquo;run&rdquo;命令，而直接是&rdquo;continue&rdquo;到第一个断点。如果不带参数的话，其实&rdquo;run&rdquo;和“continue”并没有使用上的区别。</p>
+
+<p>在设置断点到sum函数，并运行到该断点：</p>
+
+<pre><code>(dlv) b main.sum
+Breakpoint 2 set at 0x10b41d0 for main.sum() ./main.go:13
+(dlv) c
+&gt; main.sum() ./main.go:13 (hits goroutine(1):1 total:1) (PC: 0x10b41d0)
+Warning: debugging optimized function
+     8:
+     9: import (
+    10:     &quot;fmt&quot;
+    11: )
+    12:
+=&gt;  13: func sum(a, b int) int {
+    14:     s := a + b
+    15:     return s
+    16: }
+    17:
+    18: func main() {
+</code></pre>
+
+<p>这里看到执行到了sum函数。</p>
+
+<p>接着单步进入函数内：</p>
+
+<pre><code>(dlv) s
+&gt; main.sum() ./main.go:14 (PC: 0x10b41e7)
+Warning: debugging optimized function
+     9: import (
+    10:     &quot;fmt&quot;
+    11: )
+    12:
+    13: func sum(a, b int) int {
+=&gt;  14:     s := a + b
+    15:     return s
+    16: }
+    17:
+    18: func main() {
+    19:     s := sum(1, 2)
+</code></pre>
+
+<p>在函数内部，单步下一句：</p>
+
+<pre><code>(dlv) n
+&gt; main.sum() ./main.go:15 (PC: 0x10b41f5)
+Warning: debugging optimized function
+    10:     &quot;fmt&quot;
+    11: )
+    12:
+    13: func sum(a, b int) int {
+    14:     s := a + b
+=&gt;  15:     return s
+    16: }
+    17:
+    18: func main() {
+    19:     s := sum(1, 2)
+    20:     fmt.Printf(&quot;1 + 2 = %d \n&quot;, s)
+</code></pre>
+
+<p>如果想查看相关代码。</p>
+
+<pre><code>(dlv) l 13
+Showing /Users/cz/Proj/golang/src/test.air/delve/main.go:13 (PC: 0x10b41d0)
+   8:
+   9:   import (
+  10:       &quot;fmt&quot;
+  11:   )
+  12:
+  13:   func sum(a, b int) int {
+  14:       s := a + b
+  15:       return s
+  16:   }
+  17:
+  18:   func main() {
+</code></pre>
+
+<p>查看指定行号，或者查看函数：</p>
+
+<pre><code>(dlv) l sum
+Showing /Users/cz/Proj/golang/src/test.air/delve/main.go:13 (PC: 0x10b41d0)
+   8:
+   9:   import (
+  10:       &quot;fmt&quot;
+  11:   )
+  12:
+  13:   func sum(a, b int) int {
+  14:       s := a + b
+  15:       return s
+  16:   }
+  17:
+  18:   func main() {
+</code></pre>
+
+<p>最后退出：</p>
+
+<pre><code>quit
+</code></pre>
+
+<p>总的来说。整个操作过程和GDB基本类似。只要熟悉Debug过程，可以很快的上手使用。</p>
+
+<h2 id="指定debug程序">指定debug程序</h2>
+
+<p>上面的<code>dlv debug</code>是直接编译并开始debug。还可以直接传递包的路径，来指定debug那个程序。</p>
+
+<p>比如：</p>
+
+<pre><code>dlv debug github.com/nsqio/nsq/apps/nsqd
+</code></pre>
+
+<p>不论在哪个位置，执行上面的命令都会去debug nsqd程序。</p>
+
+<p>因为Golang工具链的test和trace属性，Delve还支持debug 指定的test和trace程序，其实就是和Golang的test机制很好的结合在一起。</p>
+
+<p>比如在相关目录执行：</p>
+
+<pre><code>dlv test
+</code></pre>
+
+<p>就可以调试这个目录下的单元测试代码，即&rdquo;_test.go&rdquo;的代码。同样如果传递一个包目录，就会执行指定目录下的test. 而<code>dlv trace</code>则是执行trace代码。</p>
+
+<p>比如我们到Golang的源码目录下的string包:</p>
+
+<pre><code>cd $GOROOT/src/strings
+</code></pre>
+
+<p>让后执行：</p>
+
+<pre><code>    [cz@air_11:strings]$dlv test
+    Type 'help' for list of commands.
+    (dlv) funcs ExampleToUpper
+    strings_test.ExampleToUpper
+    (dlv) b strings_test.ExampleToUpper
+    Breakpoint 1 set at 0x1150fe8 for strings_test.ExampleToUpper() ./example_test.go:270
+    (dlv) c
+    &gt; strings_test.ExampleToUpper() ./example_test.go:270 (hits goroutine(1):1 total:1) (PC: 0x1150fe8)
+    Warning: debugging optimized function
+       265:     r := strings.NewReplacer(&quot;&lt;&quot;, &quot;&amp;lt;&quot;, &quot;&gt;&quot;, &quot;&amp;gt;&quot;)
+       266:     fmt.Println(r.Replace(&quot;This is &lt;b&gt;HTML&lt;/b&gt;!&quot;))
+       267:     // Output: This is &amp;lt;b&amp;gt;HTML&amp;lt;/b&amp;gt;!
+       268: }
+       269:
+    =&gt; 270: func ExampleToUpper() {
+       271:     fmt.Println(strings.ToUpper(&quot;Gopher&quot;))
+       272:     // Output: GOPHER
+       273: }
+       274:
+       275: func ExampleToLower() {
+    (dlv)
+</code></pre>
+
+<p>这里可以看到是在测试代码的<code>ExampleToUpper</code>函数中断了下来，我们来调试字符串中转换大写的源码。</p>
+
+<p>这里一路&rdquo;s&rdquo;下去（split)，会看到，最终执行了：</p>
+
+<pre><code>    (dlv) s
+    &gt; strings.Map() ./strings.go:518 (PC: 0x10e2aad)
+    Warning: debugging optimized function
+       513:     var b []byte
+       514:     // nbytes is the number of bytes encoded in b.
+       515:     var nbytes int
+       516:
+       517:     for i, c := range s {
+    =&gt; 518:         r := mapping(c)
+       519:         if r == c {
+       520:             continue
+       521:         }
+       522:
+       523:         b = make([]byte, len(s)+utf8.UTFMax)
+    (dlv) p c
+    71
+</code></pre>
+
+<p>可以看到string包源码中，最终是将&rdquo;Gopher&rdquo;中的每个字符去到<code>mapping</code>函数中找到其对应的大写字母，这里打印第一个字符c为71也就是ASCII表示的&rdquo;G&rdquo;，查表得到为其本身。这样我们就可以单步的去看
+Golang标准库源码了。</p>
+
+<p>当然，除了指定debug二进制文件，Delve还和gdb一样可以attach到一个正在运行的进程上面，使用：</p>
+
+<pre><code>dlv attach pid 
+</code></pre>
+
+<p>以及加载一个coredump文件：</p>
+
+<pre><code>dlv core &lt;executable&gt; &lt;core&gt;
+</code></pre>
+
+<p>这个操作起来和gdb基本没有任何区别。</p>
+</div>
+            <div class="footer">
+                
+
+
+
+            </div>
+        </div>
+        
+                
+    </body>
+</html>

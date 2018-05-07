@@ -5,7 +5,6 @@ categories:
   - "golang"
 tags:
   - "debug"
-  - "gdb"
   - "golang"
 description: "当在Linux/Mac OS X/FreeBSD 或者NetBSD等系统上通过gc工具链编译Go程序构建出来的二进制文件包含了 DWARFv4 调试信息可以用于GDB(需要版本大于等于7.5）调试一个运行中的进程或者Core文件。"
 ---

@@ -97,6 +97,51 @@
             <div class="posts">
   
         <div class="post">
+        <h1 class="post-title"><a href="http://www.czkit.com/posts/golang/debug/delve_try/">Debug Golang With Delve</a></h1>
+        <span class="post-date">Thu, May 3, 2018</span>
+        <p>#</p>
+
+<p>Golang在其官方<a href="https://golang.google.cn/doc/gdb">文档</a> 说明</p>
+
+<blockquote>
+<p>Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.</p>
+</blockquote>
+
+<p>相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。</p>
+
+<p></p>
+        
+        <div class="read-more-link">
+            <a href="/posts/golang/debug/delve_try/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
+        <h1 class="post-title"><a href="http://www.czkit.com/posts/vim/vim_golang/">Golang With Vim</a></h1>
+        <span class="post-date">Fri, Apr 27, 2018</span>
+        <p>在很久以前的官网<a href="https://golang.org/">golang.org</a>上是有一段视频的。视频里面正是用了Vim作为编辑器。
+从Golang出生时，就有人为Vim好Emacs写了扩展插件。当然现在的Sublime/VSCode/Atom都可以很方便的配置成
+一款顺手的Golang开发工具。</p>
+
+<p>因为经历的原因，我是从Vim到Emacs现在又回到Vim。发现Vim的Golang环境配置已经被大神们整的这么Easy，最开始用
+Vim那会，是要自己去<a href="http://vim.org">vim.org</a>上面找插件，然后自己放到.vim目录下，在写vimrc，稍稍不注意
+就会弄的vim起来一堆错误。而今，有了<a href="https://github.com/VundleVim/Vundle.vim">Vundle</a> 和<a href="https://github.com/tpope/vim-pathogen">Pathogen</a>这样的插件管理神器，可以让小白用户快速的配置好各种插件。所以只要会Vim基本使用
+，就可以很快的使用Vim来写Golang。</p>
+
+<p>自从2006年发布了Vim7以来，直到2016年，时隔10年，Vim终于发布了Vim8，新的Vim汲取了NeoVim一些新的特性，总的
+来说建议过度到Vim8上，另外目前MacOS默认的Vim7.3，所以需要自己装一下，可以使用二进制编译安装或者直接使用<a href="https://github.com/macvim-dev/macvim">MacVim</a></p>
+
+<p>下面假定是重新安装的Vim，没有经过其他配置。Vim的用户配置文件在<code>~/.vimrc</code> ,一些插件和其他附加文件在<code>~/.vim</code>
+目录。这里假定这个目录和文件都是不存在的。</p>
+
+<p></p>
+        
+        <div class="read-more-link">
+            <a href="/posts/vim/vim_golang/">Read More…</a>
+        </div>
+        
+        </div>
+        <div class="post">
         <h1 class="post-title"><a href="http://www.czkit.com/posts/golang/toml/toml_spec/">TOML Spec 脚注</a></h1>
         <span class="post-date">Mon, Apr 16, 2018</span>
         <p>TOML是什么？TOML:Tom&rsquo;s Obvious, Minimal Language。简单来说就是Github的一位创始人觉得YAML太复杂了，所以设计了一款简单的标记语言。 那么YAML又是嘛？YAML: YAML Ain&rsquo;t Makrup Language。又是玩骇客那一套递归缩写，类似GNU ：GNU&rsquo;s Not Unix! 这里说的“Markup Language”其实也不神秘，程序猿都知道XML、HTML就是这类语言。而标记语言YAML一般使用在配置文件、文本书写（类比Markdown，Sphinx就是用的YAML来写内容）。作者Tom就是觉得YAML太过复杂(Spec 84页),因此定义了这个新的标记语言。而他最常用的地方也就是在配置文件中，可以和INI文件做对比。</p>
