@@ -7,7 +7,7 @@
 package main
 
 import (
-	"github.com/cz-it/blog/blog/Go/testing/gomock/example/spider"
+	"github.com/cz-it/czkit.com/blogs/golang/testing/gmock/example/spider"
 )
 
 func GetGoVersion(s spider.Spider) string {

@@ -7,7 +7,7 @@
 package main
 
 import (
-	"github.com/cz-it/blog/blog/Go/testing/gomock/example/spider"
+	"github.com/cz-it/czkit.com/blogs/golang/testing/gmock/example/spider"
 	"github.com/golang/mock/gomock"
 	"testing"
 )

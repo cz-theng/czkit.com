@@ -6,7 +6,7 @@
 
 package spider
 
-//go:generate mockgen -destination mock_spider.go -package spider github.com/cz-it/blog/blog/Go/testing/gomock/example/spider Spider
+//go:generate mockgen -destination mock_spider.go -package spider github.com/cz-it/czkit.com/blogs/golang/testing/gmock/example/spider Spider
 
 type Spider interface {
 	GetBody() string
