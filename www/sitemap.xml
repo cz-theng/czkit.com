@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/</loc>
+    <lastmod>2016-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.czkit.com/</loc>
     <lastmod>2018-05-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -64,6 +69,18 @@
   <url>
     <loc>http://www.czkit.com/tags/mock/</loc>
     <lastmod>2017-08-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.czkit.com/tags/mq/</loc>
+    <lastmod>2016-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.czkit.com/tags/nats/</loc>
+    <lastmod>2016-04-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

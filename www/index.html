@@ -194,6 +194,35 @@ Reflect mode generates mock interfaces by building a program that uses reflectio
         </div>
         
         </div>
+        <div class="post">
+        <h1 class="post-title"><a href="http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/">NATS之gnatcd初体验</a></h1>
+        <span class="post-date">Sun, Apr 24, 2016</span>
+        <p>现在Message Queue有多种选择，比如Java的Kafaka/ActiveMQ、Erlang的RabbitMQ、Golang的NSQ以及这里要说的gnatcd。
+##1. NATS与gnatcd
+&gt; NATS is Open Source. Performant. Simple. Scalable.A central nervous system for modern, reliable and scalable cloud and distributed systems.
+                                                &ndash;<a href="http://nats.io/">http://nats.io/</a></p>
+
+<p>按照其官网的说法，NATS是一个开源的、高性能的、简洁的、灵活的 适用于现代的可靠灵活的云和分布式系统的中枢系统。 说的很玄乎，实际上就是一个分布式
+的消息队列系统，支持PubSub/ReqRsp 模型。其最初由Apcera领导开发，并实现了Ruby版本的服务器和客户端，其主要作者<a href="https://github.com/derekcollison">Derek Collison</a>自称做了20多年的MQ，并经历过TIBOC、Rendezvous、EMC公司，这里有<a href="https://www.reddit.com/r/golang/comments/1oqqx7/gnatsd_from_apcera_a_high_performance_nats_server/">他自己的reddit回答</a>。</p>
+
+<p>根据<a href="https://github.com/nats-io">github</a>里面<a href="https://github.com/nats-io/ruby-nats">ruby-nats</a>的日志显示在11年Derek实现了Ruby版本
+的NATS服务器以及对应的客户端。然后在12年末，Derek又用Golang将服务器重写了一遍，并最终发现其效果更好，于是现在慢慢将Ruby版本的服务器淘汰了，现在
+官网也只维护一个Golang版本的服务器，也就是我们这里的gnatcd。</p>
+
+<blockquote>
+<p>NATS provides a lightweight server that is written in the Go programming language. Apcera actively maintains and supports the NATS server source code, binary distributions, and Docker image.
+                                            &ndash; <a href="http://nats.io/documentation/">http://nats.io/documentation/</a></p>
+</blockquote>
+
+<p>gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。</p>
+
+<p></p>
+        
+        <div class="read-more-link">
+            <a href="/posts/golang/nats/have_a_try_with_gnatcd/">Read More…</a>
+        </div>
+        
+        </div>
   </div>
             <div class="footer">
                 
