@@ -1,4 +1,5 @@
 .DS_Store
+blogs/golang/nats/source/
 blogs/golang/groupcache/example/taste/Gopkg.lock
 blogs/golang/groupcache/example/taste/Gopkg.toml
 blogs/golang/groupcache/example/taste/taste
