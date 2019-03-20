@@ -3,8 +3,8 @@
 > NATS源码学习系列文章基于[gnatsd1.0.0](https://github.com/nats-io/gnatsd/tree/v1.0.0)。该版本于2017年7月13
 > 日发布（[Release v1.0.0](https://github.com/nats-io/gnatsd/releases/tag/v1.0.0)）,在此之前v0.9.6是2016年12月
 > 16日发布的,中间隔了半年。算是一个比较完备的版本，但是这个版本还没有增加集群支持。为什么选择这个版本呢？
-> 因为一来这个版本比较稳定，其次又没有集群管理和[Stream](https://github.com/nats-io/nats-streaming-server)
-> 落地相关的逻辑，可以聚焦到MQ的本质上。
+> 因为一来这个版本比较稳定，同时也包含了集群管理和[Stream](https://github.com/nats-io/nats-streaming-server)
+> 落地相关的逻辑，相对完善。
 
 ## gnatsd
 在好多年前写过一篇关于NATS的初体验[NATS之gnatcd初体验](http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/)。
@@ -65,7 +65,7 @@ CMD \t payload \r\n
 这里CMD可能是INFO/CONNECT/PUB/SUB等，"\t"写出来是表示那里有个空格，然后最后以"\r\n"来结束。所以本质上来说，NATS协议是和HTTP
 类似的一种文本协议。
 
-![00_timeline](./images/00_timeline.png)
+![00_timeline](./images/00_timeline.jpg)
 
 NATS和客户端交互的时序大概如图中。
 
