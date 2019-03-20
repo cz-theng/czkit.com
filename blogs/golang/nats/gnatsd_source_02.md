@@ -287,7 +287,8 @@
 
 1. 服务Server先开一个AcceptLoop用来接收客户端TCP链接。
 2. 接收到一个客户端的链接后，启动一个ReadLoop来接收客户端发送过来的消息。
-3. 服务Server通过WaitGroup来管理所有的客户端链接状况。
+3. 整个readloop负责收消息然后处理消息，直到退出。
+4. 服务Server通过WaitGroup来管理所有的客户端链接状况。
 
 
 
