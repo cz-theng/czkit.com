@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vim on CZKit</title>
+    <title>vim on CZKit</title>
     <link>http://www.czkit.com/categories/vim/</link>
-    <description>Recent content in Vim on CZKit</description>
+    <description>Recent content in vim on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
@@ -30,9 +30,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
 来说建议过度到Vim8上，另外目前MacOS默认的Vim7.3，所以需要自己装一下，可以使用二进制编译安装或者直接使用&lt;a href=&#34;https://github.com/macvim-dev/macvim&#34;&gt;MacVim&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;下面假定是重新安装的Vim，没有经过其他配置。Vim的用户配置文件在&lt;code&gt;~/.vimrc&lt;/code&gt; ,一些插件和其他附加文件在&lt;code&gt;~/.vim&lt;/code&gt;
-目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -23,9 +23,7 @@
 &lt;p&gt;Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,9 +45,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
 来说建议过度到Vim8上，另外目前MacOS默认的Vim7.3，所以需要自己装一下，可以使用二进制编译安装或者直接使用&lt;a href=&#34;https://github.com/macvim-dev/macvim&#34;&gt;MacVim&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;下面假定是重新安装的Vim，没有经过其他配置。Vim的用户配置文件在&lt;code&gt;~/.vimrc&lt;/code&gt; ,一些插件和其他附加文件在&lt;code&gt;~/.vim&lt;/code&gt;
-目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,9 +56,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
       <guid>http://www.czkit.com/posts/golang/toml/toml_spec/</guid>
       <description>&lt;p&gt;TOML是什么？TOML:Tom&amp;rsquo;s Obvious, Minimal Language。简单来说就是Github的一位创始人觉得YAML太复杂了，所以设计了一款简单的标记语言。 那么YAML又是嘛？YAML: YAML Ain&amp;rsquo;t Makrup Language。又是玩骇客那一套递归缩写，类似GNU ：GNU&amp;rsquo;s Not Unix! 这里说的“Markup Language”其实也不神秘，程序猿都知道XML、HTML就是这类语言。而标记语言YAML一般使用在配置文件、文本书写（类比Markdown，Sphinx就是用的YAML来写内容）。作者Tom就是觉得YAML太过复杂(Spec 84页),因此定义了这个新的标记语言。而他最常用的地方也就是在配置文件中，可以和INI文件做对比。&lt;/p&gt;
 
-&lt;p&gt;如果你用过JSON做配置文件，那肯定会遇到过一个问题就是各种大小括号和结尾的逗号，一旦不小心就会导致解析失败。再设想有强迫症的你，要是JSON配置文件被人改的格式不统一，或者不同编辑器（Linux/Windows）导致的换行问题是又多揪心。而TOML则更清晰简单，容易理解，格式整洁，不易出错。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;如果你用过JSON做配置文件，那肯定会遇到过一个问题就是各种大小括号和结尾的逗号，一旦不小心就会导致解析失败。再设想有强迫症的你，要是JSON配置文件被人改的格式不统一，或者不同编辑器（Linux/Windows）导致的换行问题是又多揪心。而TOML则更清晰简单，容易理解，格式整洁，不易出错。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -79,9 +73,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
 
 &lt;p&gt;需要注意的是，对于使用标准工具链构建的Golang来说&lt;a href=&#34;https://github.com/derekparker/delve&#34;&gt;Delve&lt;/a&gt;相比如GDB是一个更好的选择，Delve可以更好的理解Go的运行时、数据结构以及表达式等。当前Delve可以支持Linux、OSX以及arm64平台下的Windows，最新能支持的平台列表参见&lt;a href=&#34;https://github.com/derekparker/delve/tree/master/Documentation/installation&#34;&gt;Delve的文档&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -108,9 +100,7 @@ Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&
 Reflect mode generates mock interfaces by building a program that uses reflection to understand interfaces.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -136,9 +126,20 @@ Reflect mode generates mock interfaces by building a program that uses reflectio
                                             &amp;ndash; &lt;a href=&#34;http://nats.io/documentation/&#34;&gt;http://nats.io/documentation/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.czkit.com/posts/golang/nats/gnatsd_source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/nats/gnatsd_source/</guid>
+      <description>NATS 开源学习——0X00：协议  NATS源码学习系列文章基于gnatsd1.0.0。该版本于2017年7月13 日发布（Release v1.0.0）,在此之前v0.9.6是2016年12月 16日发布的,中间隔了半年。算是一个比较完备的版本，但是这个版本还没有增加集群支持。为什么选择这个版本呢？ 因为一来这个版本比较稳定，同时也包含了集群管理和Stream 落地相关的逻辑，相对完善。
+ gnatsd 在好多年前写过一篇关于NATS的初体验NATS之gnatcd初体验。 那个时候gnatsd才0.8.0。当时只是因为新看到一个听说性能很屌的MQ，于是就尝试了一下，一晃眼，gnatsd都发布了n多个版本了（1.4.x都出来了） 也成为了CNCF孵化项目之一。所以通过gnatsd的一个稳定版本来学习下 这个MQ的实现。
+ NATS定义了一套非常简单的协议，来实现一个基于TCP链接的发布订阅系统。其核心就是订阅与发布，为此使用Golang实现了这套协议转发功能的gnatsd服务。这里 是说得益于Golang呢？还是说项目方写程序能力厉害呢？还是服务器设计的厉害呢？反正项目方原先是有一个Ruby的实现，现在抛弃了，现在官方主要维护的是这个Golang版本的gnatsd。
+把gnatsd的源码down下来后，其核心代码只有不到一万行，另外一个MQ项目NSQ也是类似的规模。 这些高效的Borkerless MQ是如何通过Golang来实现？通过看代码，这里进行了些分析。
+目录如上，主要通过协议分析，再到协议的实现去看gnatsd是如何实现PUB/SUB的功能。</description>
     </item>
     
   </channel>

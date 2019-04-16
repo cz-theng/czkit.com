@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Debug on CZKit</title>
+    <title>debug on CZKit</title>
     <link>http://www.czkit.com/tags/debug/</link>
-    <description>Recent content in Debug on CZKit</description>
+    <description>Recent content in debug on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 03 May 2018 00:00:00 +0000</lastBuildDate>
@@ -23,9 +23,7 @@
 &lt;p&gt;Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,9 +40,7 @@
 
 &lt;p&gt;需要注意的是，对于使用标准工具链构建的Golang来说&lt;a href=&#34;https://github.com/derekparker/delve&#34;&gt;Delve&lt;/a&gt;相比如GDB是一个更好的选择，Delve可以更好的理解Go的运行时、数据结构以及表达式等。当前Delve可以支持Linux、OSX以及arm64平台下的Windows，最新能支持的平台列表参见&lt;a href=&#34;https://github.com/derekparker/delve/tree/master/Documentation/installation&#34;&gt;Delve的文档&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mock on CZKit</title>
+    <title>mock on CZKit</title>
     <link>http://www.czkit.com/tags/mock/</link>
-    <description>Recent content in Mock on CZKit</description>
+    <description>Recent content in mock on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 22 Aug 2017 00:00:00 +0000</lastBuildDate>
@@ -26,9 +26,7 @@
 Reflect mode generates mock interfaces by building a program that uses reflection to understand interfaces.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -10,8 +10,8 @@
     	
     <meta name="generator" content="Hugo 0.55.0" />
     
-    <title>vim &middot; CZKit</title>
-    <meta content="vim - CZKit" property="og:title">
+    <title> &middot; CZKit</title>
+    <meta content=" - CZKit" property="og:title">
     <meta content=" - " property="og:description">    
     <!-- CSS --> 
     <link rel="stylesheet" href="http://www.czkit.com/css/print.css" media="print">
@@ -31,9 +31,7 @@
     <!-- Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <!-- RSS --> 
-    <link href="http://www.czkit.com/categories/vim/index.xml" rel="alternate" type="application/rss+xml" title="CZKit" />
-    <link href="http://www.czkit.com/categories/vim/index.xml" rel="feed" type="application/rss+xml" title="CZKit" />
+    
 
 	</head>
     <body>
@@ -95,18 +93,56 @@
 </div>
 
         <div class="content container">
-            <h1 class="title">vim</h1>
-<ul class="posts">
-    <li>
-        <span>
-            <a href="http://www.czkit.com/posts/vim/vim_golang/">Golang With Vim</a>
-            <time class="pull-right post-list"> Apr 27, 2018</time>
-        </span>
-    </li>
-</ul>
+            <div class="post">
+  <h1></h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+      
+      
+      
+      
+      
+      </span>  
+  </div>    
+  
+  
 
+<h1 id="nats-开源学习-0x00-协议">NATS 开源学习——0X00：协议</h1>
+
+<blockquote>
+<p>NATS源码学习系列文章基于<a href="https://github.com/nats-io/gnatsd/tree/v1.0.0">gnatsd1.0.0</a>。该版本于2017年7月13
+日发布（<a href="https://github.com/nats-io/gnatsd/releases/tag/v1.0.0">Release v1.0.0</a>）,在此之前v0.9.6是2016年12月
+16日发布的,中间隔了半年。算是一个比较完备的版本，但是这个版本还没有增加集群支持。为什么选择这个版本呢？
+因为一来这个版本比较稳定，同时也包含了集群管理和<a href="https://github.com/nats-io/nats-streaming-server">Stream</a>
+落地相关的逻辑，相对完善。</p>
+</blockquote>
+
+<h2 id="gnatsd">gnatsd</h2>
+
+<p>在好多年前写过一篇关于NATS的初体验<a href="http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/">NATS之gnatcd初体验</a>。
+那个时候gnatsd才0.8.0。当时只是因为新看到一个听说性能很屌的MQ，于是就尝试了一下，一晃眼，gnatsd都发布了n多个版本了（1.4.x都出来了）
+也成为了<a href="https://www.cncf.io/blog/2018/03/15/cncf-to-host-nats/">CNCF</a>孵化项目之一。所以通过gnatsd的一个稳定版本来学习下
+这个MQ的实现。</p>
+
+<!--more-->
+
+<p>NATS定义了一套非常简单的协议，来实现一个基于TCP链接的发布订阅系统。其核心就是订阅与发布，为此使用Golang实现了这套协议转发功能的gnatsd服务。这里
+是说得益于Golang呢？还是说项目方写程序能力厉害呢？还是服务器设计的厉害呢？反正项目方原先是有一个Ruby的实现，现在抛弃了，现在官方主要维护的是这个Golang版本的gnatsd。</p>
+
+<p>把gnatsd的源码down下来后，其核心代码只有不到一万行，另外一个MQ项目<a href="https://github.com/nsqio/nsq">NSQ</a>也是类似的规模。 这些高效的Borkerless MQ是如何通过Golang来实现？通过看代码，这里进行了些分析。</p>
+
+<p><img src="./images/gitbook.jpg" alt="" /></p>
+
+<p>目录如上，主要通过协议分析，再到协议的实现去看gnatsd是如何实现PUB/SUB的功能。</p>
+
+</div>
             <div class="footer">
                 
+
+
+
             </div>
         </div>
         

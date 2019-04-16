@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mq on CZKit</title>
+    <title>MQ on CZKit</title>
     <link>http://www.czkit.com/tags/mq/</link>
-    <description>Recent content in Mq on CZKit</description>
+    <description>Recent content in MQ on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 24 Apr 2016 00:00:00 +0000</lastBuildDate>
@@ -34,9 +34,7 @@
                                             &amp;ndash; &lt;a href=&#34;http://nats.io/documentation/&#34;&gt;http://nats.io/documentation/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。&lt;/p&gt;</description>
     </item>
     
   </channel>
