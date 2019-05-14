@@ -1,3 +1,15 @@
+---
+title: "NATS 开源学习"
+date: 2019-03-02T22:07:36+08:00
+categories:
+  - "golang"
+tags:
+  - "NATS"
+  - "MQ"
+
+description: "NATS源码学习系列文章基于[gnatsd1.0.0](https://github.com/nats-io/gnatsd/tree/v1.0.0)"
+---
+
 # NATS 开源学习——0X00：协议
 
 > NATS源码学习系列文章基于[gnatsd1.0.0](https://github.com/nats-io/gnatsd/tree/v1.0.0)。该版本于2017年7月13

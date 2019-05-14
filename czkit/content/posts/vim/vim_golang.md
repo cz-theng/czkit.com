@@ -1,6 +1,6 @@
 ---
 title: "Golang With Vim"
-date: 2018-04-27
+date: 2019-04-27T22:07:36+08:00
 categories:
   - "vim"
 tags:

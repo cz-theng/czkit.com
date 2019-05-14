@@ -7,7 +7,7 @@ theme = "hyde-hyde"
     description = "Game & Golang"
     author = "CZ"
 	authorimage = "/images/logo.png"
-	dateformat="2016-01-02"
+
 
 
 [params.social]
