@@ -12,7 +12,7 @@ theme = "hyde-hyde"
 
 [params.social]
 	github = "cz-it"
-	email="czkit.theng@gmail.com"
+	email="czkit_theng@163.com"
 
 [[menu.main]]
 	name = "Posts"
