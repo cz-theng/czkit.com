@@ -7,11 +7,14 @@ theme = "hyde-hyde"
     description = "Game & Golang"
     author = "CZ"
 	authorimage = "/images/logo.png"
-	disqusShortname = "czkit"
 	highlightjs = true
+	highlightjsstyle="androidstudio"
+
+	disqusShortname = "czkit"
 	UtterancesRepo = "cz-it/czkit.com"
 	UtterancesIssueTerm = "pathname"
 	UtterancesTheme = "github-light"
+
 
 
 [params.social]
