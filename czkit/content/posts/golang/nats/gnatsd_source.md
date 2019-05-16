@@ -32,8 +32,13 @@ NATS定义了一套非常简单的协议，来实现一个基于TCP链接的发�
 
 把gnatsd的源码down下来后，其核心代码只有不到一万行，另外一个MQ项目[NSQ](https://github.com/nsqio/nsq)也是类似的规模。 这些高效的Borkerless MQ是如何通过Golang来实现？通过看代码，这里进行了些分析。
 
-![](./images/gitbook.jpg)
+![](../images/gitbook.jpg)
 
 目录如上，主要通过协议分析，再到协议的实现去看gnatsd是如何实现PUB/SUB的功能。
+
+gnats与2017年7月13日发布[Release v1.0.0](https://github.com/nats-io/gnatsd/releases/tag/v1.0.0)
+，而此之前v0.9.6是2016年12月16日发布的,中间隔了半年。算是一个比较完备的版本。
+
+故此通过对1.0版本代码的学习，写了篇总结，详见[NATS开源学习](https://cz-it.gitbook.io/nats-source/)
 
 
