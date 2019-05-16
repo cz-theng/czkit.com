@@ -6,15 +6,37 @@
     <description>Recent content in MQ on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 24 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 22:07:36 +0800</lastBuildDate>
     
 	<atom:link href="http://www.czkit.com/tags/mq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>NATS 开源学习</title>
+      <link>http://www.czkit.com/posts/golang/nats/gnatsd_source/</link>
+      <pubDate>Sat, 02 Mar 2019 22:07:36 +0800</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/nats/gnatsd_source/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;NATS源码学习系列文章基于&lt;a href=&#34;https://github.com/nats-io/gnatsd/tree/v1.0.0&#34;&gt;gnatsd1.0.0&lt;/a&gt;。该版本于2017年7月13
+日发布（&lt;a href=&#34;https://github.com/nats-io/gnatsd/releases/tag/v1.0.0&#34;&gt;Release v1.0.0&lt;/a&gt;）,在此之前v0.9.6是2016年12月
+16日发布的,中间隔了半年。算是一个比较完备的版本，但是这个版本还没有增加集群支持。为什么选择这个版本呢？
+因为一来这个版本比较稳定，同时也包含了集群管理和&lt;a href=&#34;https://github.com/nats-io/nats-streaming-server&#34;&gt;Stream&lt;/a&gt;
+落地相关的逻辑，相对完善。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;gnatsd&#34;&gt;gnatsd&lt;/h2&gt;
+
+&lt;p&gt;在好多年前写过一篇关于NATS的初体验&lt;a href=&#34;http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/&#34;&gt;NATS之gnatcd初体验&lt;/a&gt;。
+那个时候gnatsd才0.8.0。当时只是因为新看到一个听说性能很屌的MQ，于是就尝试了一下，一晃眼，gnatsd都发布了n多个版本了（1.4.x都出来了）
+也成为了&lt;a href=&#34;https://www.cncf.io/blog/2018/03/15/cncf-to-host-nats/&#34;&gt;CNCF&lt;/a&gt;孵化项目之一。所以通过gnatsd的一个稳定版本来学习下
+这个MQ的实现。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>NATS之gnatcd初体验</title>
       <link>http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/</link>
-      <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 24 Apr 2016 22:07:36 +0800</pubDate>
       
       <guid>http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/</guid>
       <description>&lt;p&gt;现在Message Queue有多种选择，比如Java的Kafaka/ActiveMQ、Erlang的RabbitMQ、Golang的NSQ以及这里要说的gnatcd。
