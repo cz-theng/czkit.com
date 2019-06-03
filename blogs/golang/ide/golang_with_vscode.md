@@ -119,7 +119,18 @@ UI丰富的编辑器（IDE)或许是Vim之外的另一选择。
 	gocode cz$ ls $GOPATH/bin
 	gocode	
 	
+这时候，虽然"shift + command +p"打开"go: install/update tools"选择go code，还是提示失败（因为此时是更新，但是一样拉不到代码）但是gocode
+已经可以被VSCode使用了，在打开其他.go文件时，不会再提示安装gocode。
+	
 其他的类似，都是可以在github找到镜像代码的，自行安装就可以了。
+
+安装好后，我们看到$GOPATH/bin目录下有：
+
+	bin cz$ ls $GOPATH/bin
+	fillstruct	go-symbols	godef gomodifytags goplay gorename impl golint
+	go-outline	gocode		godoctor   gopkgs   gopls   guru    dlv   gotests
+
+总共16个工具，（gocode有两个，推荐github.com/stamblerre/gocode，支持go.mod）替换上面作为示例也是最原始的github.com/mdempsky/gocode。	
 
 上面有个语法没说，就是replace，标准的语法是 
 	
@@ -130,4 +141,3 @@ UI丰富的编辑器（IDE)或许是Vim之外的另一选择。
 ## 总结
 前面就说了，对于没有IDE偏好的，然后又是初次体验GOlang（大部分是看开源项目代码）。那么这么一款经过简单几步配置就可以高亮、跳转、自动补齐甚至可以调试的
 轻量级、高扩展的编辑器，可能就是个蛮好的选择。整个弄下来，若不是插件那块墙的原因，真的是3步就开始go go go...
-
