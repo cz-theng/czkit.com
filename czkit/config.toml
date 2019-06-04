@@ -7,12 +7,19 @@ theme = "hyde-hyde"
     description = "Game & Golang"
     author = "CZ"
 	authorimage = "/images/logo.png"
-	dateformat="2016-01-02"
+	highlightjs = true
+	highlightjsstyle="androidstudio"
+
+	disqusShortname = "czkit"
+	UtterancesRepo = "cz-it/czkit.com"
+	UtterancesIssueTerm = "pathname"
+	UtterancesTheme = "github-light"
+
 
 
 [params.social]
 	github = "cz-it"
-	email="czkit.theng@gmail.com"
+	email="czkit_theng@163.com"
 
 [[menu.main]]
 	name = "Posts"

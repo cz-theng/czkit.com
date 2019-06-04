@@ -1,6 +1,6 @@
 ---
 title: "NATS之gnatcd初体验"
-date: 2016-04-24
+date: 2016-04-24T22:07:36+08:00
 categories:
   - "golang"
 tags:

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Toml on CZKit</title>
+    <title>toml on CZKit</title>
     <link>http://www.czkit.com/tags/toml/</link>
-    <description>Recent content in Toml on CZKit</description>
+    <description>Recent content in toml on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Apr 2018 22:07:36 +0800</lastBuildDate>
     
 	<atom:link href="http://www.czkit.com/tags/toml/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,14 +14,12 @@
     <item>
       <title>TOML Spec 脚注</title>
       <link>http://www.czkit.com/posts/golang/toml/toml_spec/</link>
-      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Apr 2018 22:07:36 +0800</pubDate>
       
       <guid>http://www.czkit.com/posts/golang/toml/toml_spec/</guid>
       <description>&lt;p&gt;TOML是什么？TOML:Tom&amp;rsquo;s Obvious, Minimal Language。简单来说就是Github的一位创始人觉得YAML太复杂了，所以设计了一款简单的标记语言。 那么YAML又是嘛？YAML: YAML Ain&amp;rsquo;t Makrup Language。又是玩骇客那一套递归缩写，类似GNU ：GNU&amp;rsquo;s Not Unix! 这里说的“Markup Language”其实也不神秘，程序猿都知道XML、HTML就是这类语言。而标记语言YAML一般使用在配置文件、文本书写（类比Markdown，Sphinx就是用的YAML来写内容）。作者Tom就是觉得YAML太过复杂(Spec 84页),因此定义了这个新的标记语言。而他最常用的地方也就是在配置文件中，可以和INI文件做对比。&lt;/p&gt;
 
-&lt;p&gt;如果你用过JSON做配置文件，那肯定会遇到过一个问题就是各种大小括号和结尾的逗号，一旦不小心就会导致解析失败。再设想有强迫症的你，要是JSON配置文件被人改的格式不统一，或者不同编辑器（Linux/Windows）导致的换行问题是又多揪心。而TOML则更清晰简单，容易理解，格式整洁，不易出错。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;如果你用过JSON做配置文件，那肯定会遇到过一个问题就是各种大小括号和结尾的逗号，一旦不小心就会导致解析失败。再设想有强迫症的你，要是JSON配置文件被人改的格式不统一，或者不同编辑器（Linux/Windows）导致的换行问题是又多揪心。而TOML则更清晰简单，容易理解，格式整洁，不易出错。&lt;/p&gt;</description>
     </item>
     
   </channel>

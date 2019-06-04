@@ -2,13 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CZKit</title>
-    <link>http://czkit.com/</link>
+    <link>http://www.czkit.com/</link>
     <description>Recent content on CZKit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Tue, 14 May 2019 22:12:13 +0800</lastBuildDate>
     
-	<atom:link href="http://czkit.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.czkit.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>http://www.czkit.com/posts/test/</link>
+      <pubDate>Tue, 14 May 2019 22:12:13 +0800</pubDate>
+      
+      <guid>http://www.czkit.com/posts/test/</guid>
+      <description>asfasfasdfs</description>
+    </item>
+    
+    <item>
+      <title>NATS 开源学习</title>
+      <link>http://www.czkit.com/posts/golang/nats/gnatsd_source/</link>
+      <pubDate>Sat, 02 Mar 2019 22:07:36 +0800</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/nats/gnatsd_source/</guid>
+      <description>&lt;h1 id=&#34;nats-开源学习-0x00-协议&#34;&gt;NATS 开源学习——0X00：协议&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NATS源码学习系列文章基于&lt;a href=&#34;https://github.com/nats-io/gnatsd/tree/v1.0.0&#34;&gt;gnatsd1.0.0&lt;/a&gt;。该版本于2017年7月13
+日发布（&lt;a href=&#34;https://github.com/nats-io/gnatsd/releases/tag/v1.0.0&#34;&gt;Release v1.0.0&lt;/a&gt;）,在此之前v0.9.6是2016年12月
+16日发布的,中间隔了半年。算是一个比较完备的版本，但是这个版本还没有增加集群支持。为什么选择这个版本呢？
+因为一来这个版本比较稳定，同时也包含了集群管理和&lt;a href=&#34;https://github.com/nats-io/nats-streaming-server&#34;&gt;Stream&lt;/a&gt;
+落地相关的逻辑，相对完善。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;gnatsd&#34;&gt;gnatsd&lt;/h2&gt;
+
+&lt;p&gt;在好多年前写过一篇关于NATS的初体验&lt;a href=&#34;http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/&#34;&gt;NATS之gnatcd初体验&lt;/a&gt;。
+那个时候gnatsd才0.8.0。当时只是因为新看到一个听说性能很屌的MQ，于是就尝试了一下，一晃眼，gnatsd都发布了n多个版本了（1.4.x都出来了）
+也成为了&lt;a href=&#34;https://www.cncf.io/blog/2018/03/15/cncf-to-host-nats/&#34;&gt;CNCF&lt;/a&gt;孵化项目之一。所以通过gnatsd的一个稳定版本来学习下
+这个MQ的实现。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debug Golang With Delve</title>
+      <link>http://www.czkit.com/posts/golang/debug/delve_try/</link>
+      <pubDate>Thu, 03 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/debug/delve_try/</guid>
+      <description>&lt;p&gt;Golang在其官方&lt;a href=&#34;https://golang.google.cn/doc/gdb&#34;&gt;文档&lt;/a&gt; 说明&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Note that Delve is a better alternative to GDB when debugging Go programs built with the standard toolchain. It understands the Go runtime, data structures, and expressions better than GDB. Delve currently supports Linux, OSX, and Windows on amd64. For the most up-to-date list of supported platforms, please see the Delve documentation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;相比于GDB，Delve更适合于Golang程序的Debug操作，为了这句官方的推荐，我们也应该去尝试一下Delve。当前Delve可以支持Linux/OSX/Windows这几个主流平台，基本可以替代GDB的使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Golang With Vim</title>
+      <link>http://www.czkit.com/posts/vim/vim_golang/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/vim/vim_golang/</guid>
+      <description>&lt;p&gt;在很久以前的官网&lt;a href=&#34;https://golang.org/&#34;&gt;golang.org&lt;/a&gt;上是有一段视频的。视频里面正是用了Vim作为编辑器。
+从Golang出生时，就有人为Vim好Emacs写了扩展插件。当然现在的Sublime/VSCode/Atom都可以很方便的配置成
+一款顺手的Golang开发工具。&lt;/p&gt;
+
+&lt;p&gt;因为经历的原因，我是从Vim到Emacs现在又回到Vim。发现Vim的Golang环境配置已经被大神们整的这么Easy，最开始用
+Vim那会，是要自己去&lt;a href=&#34;http://vim.org&#34;&gt;vim.org&lt;/a&gt;上面找插件，然后自己放到.vim目录下，在写vimrc，稍稍不注意
+就会弄的vim起来一堆错误。而今，有了&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; 和&lt;a href=&#34;https://github.com/tpope/vim-pathogen&#34;&gt;Pathogen&lt;/a&gt;这样的插件管理神器，可以让小白用户快速的配置好各种插件。所以只要会Vim基本使用
+，就可以很快的使用Vim来写Golang。&lt;/p&gt;
+
+&lt;p&gt;自从2006年发布了Vim7以来，直到2016年，时隔10年，Vim终于发布了Vim8，新的Vim汲取了NeoVim一些新的特性，总的
+来说建议过度到Vim8上，另外目前MacOS默认的Vim7.3，所以需要自己装一下，可以使用二进制编译安装或者直接使用&lt;a href=&#34;https://github.com/macvim-dev/macvim&#34;&gt;MacVim&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下面假定是重新安装的Vim，没有经过其他配置。Vim的用户配置文件在&lt;code&gt;~/.vimrc&lt;/code&gt; ,一些插件和其他附加文件在&lt;code&gt;~/.vim&lt;/code&gt;
+目录。这里假定这个目录和文件都是不存在的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TOML Spec 脚注</title>
+      <link>http://www.czkit.com/posts/golang/toml/toml_spec/</link>
+      <pubDate>Mon, 16 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/toml/toml_spec/</guid>
+      <description>&lt;p&gt;TOML是什么？TOML:Tom&amp;rsquo;s Obvious, Minimal Language。简单来说就是Github的一位创始人觉得YAML太复杂了，所以设计了一款简单的标记语言。 那么YAML又是嘛？YAML: YAML Ain&amp;rsquo;t Makrup Language。又是玩骇客那一套递归缩写，类似GNU ：GNU&amp;rsquo;s Not Unix! 这里说的“Markup Language”其实也不神秘，程序猿都知道XML、HTML就是这类语言。而标记语言YAML一般使用在配置文件、文本书写（类比Markdown，Sphinx就是用的YAML来写内容）。作者Tom就是觉得YAML太过复杂(Spec 84页),因此定义了这个新的标记语言。而他最常用的地方也就是在配置文件中，可以和INI文件做对比。&lt;/p&gt;
+
+&lt;p&gt;如果你用过JSON做配置文件，那肯定会遇到过一个问题就是各种大小括号和结尾的逗号，一旦不小心就会导致解析失败。再设想有强迫症的你，要是JSON配置文件被人改的格式不统一，或者不同编辑器（Linux/Windows）导致的换行问题是又多揪心。而TOML则更清晰简单，容易理解，格式整洁，不易出错。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Debugging Go Code with GDB [译]</title>
+      <link>http://www.czkit.com/posts/golang/translate/debugging_go_code_with_gdb/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/translate/debugging_go_code_with_gdb/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;一篇很老的文章，最近翻来看，好像也没人翻译，随手翻译一遍，文章来自&lt;a href=&#34;https://golang.google.cn/doc/gdb&#34;&gt;Golang&amp;rsquo;s Blog&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以下说明适用于Golang的标准工具链（Go编译器如gc以及其他工具），GccGo有他自己的gdb支持。&lt;/p&gt;
+
+&lt;p&gt;需要注意的是，对于使用标准工具链构建的Golang来说&lt;a href=&#34;https://github.com/derekparker/delve&#34;&gt;Delve&lt;/a&gt;相比如GDB是一个更好的选择，Delve可以更好的理解Go的运行时、数据结构以及表达式等。当前Delve可以支持Linux、OSX以及arm64平台下的Windows，最新能支持的平台列表参见&lt;a href=&#34;https://github.com/derekparker/delve/tree/master/Documentation/installation&#34;&gt;Delve的文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GDB并不能很好理解Go程序，比如栈管理、线程以及包含了和传统GDB执行模型不一样的运行时，即便是通过gccgo来编译的程序有时候也会产生让人迷惑的信息。总的来说，虽然GDB可以在一些场景（如调试Cgo代码或者调试运行时）起到定位问题的作用，但它不是Go赖以生存的调试器，尤其是对于并发场景。或者说GDB不是Go程序首选的调试器。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://www.czkit.com/about/</link>
+      <pubDate>Sun, 01 Apr 2018 21:38:09 +0800</pubDate>
+      
+      <guid>http://www.czkit.com/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>使用Golang的官方mock工具--gomock</title>
+      <link>http://www.czkit.com/posts/golang/mock/test_with_gomock/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/mock/test_with_gomock/</guid>
+      <description>&lt;p&gt;在Golang的官方Repo(&lt;a href=&#34;https://github.com/golang/&#34;&gt;https://github.com/golang/&lt;/a&gt;) 中有一个单独的工程叫&amp;rdquo;mock&amp;rdquo;(&lt;a href=&#34;https://github.com/golang/mock&#34;&gt;https://github.com/golang/mock&lt;/a&gt;) ,虽然star不是特别多，但它却是Golang官方放出来的mock工具，冲这这点我们也需要使用下，虽然并不是官方的就是最好（比如比标准库http更快的fasthttp）。&lt;/p&gt;
+
+&lt;p&gt;不同场景mock的对象互相不同，那么gomock主要是mock哪些内容呢？&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;mockgen has two modes of operation: source and reflect. Source mode generates mock interfaces from a source file.
+Reflect mode generates mock interfaces by building a program that uses reflection to understand interfaces.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;通过gomock的辅助工具我们知道，gomock主要是针对我们go代码中的接口进行mock的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>NATS之gnatcd初体验</title>
+      <link>http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/</link>
+      <pubDate>Sun, 24 Apr 2016 22:07:36 +0800</pubDate>
+      
+      <guid>http://www.czkit.com/posts/golang/nats/have_a_try_with_gnatcd/</guid>
+      <description>&lt;p&gt;现在Message Queue有多种选择，比如Java的Kafaka/ActiveMQ、Erlang的RabbitMQ、Golang的NSQ以及这里要说的gnatcd。
+##1. NATS与gnatcd
+&amp;gt; NATS is Open Source. Performant. Simple. Scalable.A central nervous system for modern, reliable and scalable cloud and distributed systems.
+                                                &amp;ndash;&lt;a href=&#34;http://nats.io/&#34;&gt;http://nats.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;按照其官网的说法，NATS是一个开源的、高性能的、简洁的、灵活的 适用于现代的可靠灵活的云和分布式系统的中枢系统。 说的很玄乎，实际上就是一个分布式
+的消息队列系统，支持PubSub/ReqRsp 模型。其最初由Apcera领导开发，并实现了Ruby版本的服务器和客户端，其主要作者&lt;a href=&#34;https://github.com/derekcollison&#34;&gt;Derek Collison&lt;/a&gt;自称做了20多年的MQ，并经历过TIBOC、Rendezvous、EMC公司，这里有&lt;a href=&#34;https://www.reddit.com/r/golang/comments/1oqqx7/gnatsd_from_apcera_a_high_performance_nats_server/&#34;&gt;他自己的reddit回答&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;根据&lt;a href=&#34;https://github.com/nats-io&#34;&gt;github&lt;/a&gt;里面&lt;a href=&#34;https://github.com/nats-io/ruby-nats&#34;&gt;ruby-nats&lt;/a&gt;的日志显示在11年Derek实现了Ruby版本
+的NATS服务器以及对应的客户端。然后在12年末，Derek又用Golang将服务器重写了一遍，并最终发现其效果更好，于是现在慢慢将Ruby版本的服务器淘汰了，现在
+官网也只维护一个Golang版本的服务器，也就是我们这里的gnatcd。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;NATS provides a lightweight server that is written in the Go programming language. Apcera actively maintains and supports the NATS server source code, binary distributions, and Docker image.
+                                            &amp;ndash; &lt;a href=&#34;http://nats.io/documentation/&#34;&gt;http://nats.io/documentation/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;gnatcd根据NATS说法，会由Apcera维护，并提供源码、二进制文件以及Docker镜像文件。&lt;/p&gt;</description>
+    </item>
     
   </channel>
 </rss>
