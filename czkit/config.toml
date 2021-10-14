@@ -1,46 +1,91 @@
-baseURL = "http://www.czkit.com/"
-languageCode = "zh-cn"
-title = "CZKit"
-theme = "hyde-hyde"
+# This is a simple configuration.
+# If you want to see the full configuration, please check `full-config.toml` .
+# And see https://gohugo.io/getting-started/configuration/ .
+
+baseURL = "http://czkit.com/"
+#baseURL = "http://127.0.0.1/"
+title = "CZ Theng"
+enableRobotsTXT = true
+enableEmoji = true
+theme = "cz-jane"
+
+
+hasCJKLanguage = true     
+paginate = 5              
+copyright = "CZ Theng"    
+
+[RSS]
+  limit=10
+
+# language support # en / zh-cn / other... translations present in i18n/
+defaultContentLanguage = "en"           
+[languages.en]
+  languageCode = "en"
+
+[author]                  
+  name = "CZ Theng"
+
+[sitemap]                 
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[[menu.main]]             
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Categories"
+  weight = 20
+  identifier = "categories"
+  url = "/categories/"
+[[menu.main]]
+  name = "Archives"
+  weight = 30
+  identifier = "archives"
+  url = "/post/"
+[[menu.main]]
+  name = "Tags"
+  weight = 40
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "About"
+  weight = 50
+  identifier = "about"
+  url = "/about/"
+
 
 [params]
-    description = "Game & Golang"
-    author = "CZ"
-	authorimage = "/images/logo.png"
-	highlightjs = true
-	highlightjsstyle="androidstudio"
-
-	disqusShortname = "czkit"
-	UtterancesRepo = "cz-it/czkit.com"
-	UtterancesIssueTerm = "pathname"
-	UtterancesTheme = "github-light"
+  since = "2018"            
+  homeFullContent = false   
 
 
+  # site info (optional) 
+  logoTitle = "CZ"        
+  logoImage = "/images/logo.png"
+  keywords = ["CZ", "rust","blockchain"]
+  description = "CZ Theng"
 
-[params.social]
-	github = "cz-it"
-	email="czkit_theng@163.com"
+  # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
+  dateFormatToUse = "2006-01-02"
 
-[[menu.main]]
-	name = "Posts"
-	weight = 100
-	identifier = "posts"
-	url = "/posts/"
+  toc = true   # 是否开启目录
+  photoswipe = true         
+  contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
 
-[[menu.main]]
-	name = "Category"
-	weight = 200
-	identifier = "categories"
-	url = "/categories/"
 
-[[menu.main]]
-	name = "Tags"
-	weight = 300
-	identifier = "tags"
-	url = "/tags/"
+  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
 
-[[menu.main]]
-	name = "About"
-	identifier = "about"
-	weight = 400
-	url = "/about.html"
+  [params.social] 
+    a-email = "mailto:cz.theng@gmail.com"
+    g-github = "https://github.com/cz-it/"
+
+  [params.utteranc]    
+    enable = true
+    repo = "cz-it/czkit.com"
+    issueTerm = "pathname"
+    theme = "github-light"
