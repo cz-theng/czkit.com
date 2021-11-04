@@ -9,3 +9,5 @@ cp -rf ../favicon.png ../www
 cp -rf ../favicon.png ../www/favicon.ico
 pip install lxml
 python gen.py
+rm -rf ../abount_cz
+rm -rf ../awesome_rust
