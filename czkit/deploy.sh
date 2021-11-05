@@ -14,5 +14,5 @@ pip install lxml
 mkdir ../www/about
 mkdir ../www/awesome-rust
 python gen.py
-#rm -rf ../www/about_cz
-#rm -rf ../www/awesome_rust
+rm -rf ../www/about_cz
+rm -rf ../www/awesome_rust
