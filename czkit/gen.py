@@ -22,3 +22,5 @@ def parse_blog(src,dst):
 def main():
 	parse_blog("about_cz", "about")
 	parse_blog("awesome_rust","awesome-rust")
+
+main()
