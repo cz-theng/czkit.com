@@ -5,6 +5,7 @@ hugo -d ../www -v
 #mkdir ../www/images
 #cp -rf ../www/about_cz/index.html ../www/about
 ls ../www -l
+ls ../www/about_cz
 cp -rf ../logo.png ../www/images
 cp -rf ../favicon.png ../www
 cp -rf ../favicon.png ../www/favicon.ico
