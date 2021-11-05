@@ -7,7 +7,7 @@ import os
 def parse_blog(src,dst):
 	src_path = os.path.abspath("../www/"+src+"/index.html")
 	print("src:",src_path)
-	in_file = open(src,"r")
+	in_file = open(src_path,"r")
 	html_text = in_file.read()
 	dom= html.fromstring(html_text)
 	pc_divs=dom.xpath('.//div[@class="post-copyright"]')
