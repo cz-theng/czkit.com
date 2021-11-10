@@ -17,6 +17,10 @@ title: "Awesome Rust"
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
+## FileSystem
+### [dirs](https://github.com/dirs-dev/dirs-rs)
+获取系统的home目录、audio目录等
+
 ## WebFramework
 ### [actix](https://github.com/actix/actix)
 异步的web框架，基于tokio
