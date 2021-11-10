@@ -17,6 +17,9 @@ title: "Awesome Rust"
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
+## WebFramework
+### [actix](https://github.com/actix/actix)
+异步的web框架，基于tokio
 
 ## Utils
 
