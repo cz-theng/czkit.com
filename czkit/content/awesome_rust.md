@@ -25,6 +25,10 @@ Rust的JSON库
 ### [actix](https://github.com/actix/actix)
 异步的web框架，基于tokio
 
+## DB
+### [rocksdb](https://github.com/rust-rocksdb/rust-rocksdb)
+区块链都在用的rocksdb的rust的binding，是一个binding，不是rust重新实现
+
 ## Utils
 
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
