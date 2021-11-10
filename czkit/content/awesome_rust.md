@@ -3,6 +3,8 @@ title: "Awesome Rust"
 ---
 
 ## Console
+### [clap](https://github.com/clap-rs/clap)
+命令行解析框架，做Flag解析
 
 ### [console](https://github.com/mitsuhiko/console)
 多终端统一样式输出,支持Unicod和ANSI,有颜色、字体，甚至连Emoj表情都有
