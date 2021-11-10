@@ -16,4 +16,10 @@ title: "Awesome Rust"
 Rust的JSON库
 
 
+## Utils
+
+### [git-version](https://github.com/fusion-engineering/rust-git-version)
+获取仓库当前的git commit等相关信息作为版本号
+
+
 
