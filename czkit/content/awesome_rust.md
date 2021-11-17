@@ -17,6 +17,10 @@ title: "Awesome Rust"
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
+## Random
+### [rand](https://github.com/rust-random/rand)
+非标准库中的随机数
+
 ## FileSystem
 ### [dirs](https://github.com/dirs-dev/dirs-rs)
 获取系统的home目录、audio目录等
