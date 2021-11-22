@@ -38,5 +38,7 @@ Rust的JSON库
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
 获取仓库当前的git commit等相关信息作为版本号
 
+### [rustc-version](https://github.com/djc/rustc-version-rs)
+获得当前rustc的版本
 
 
