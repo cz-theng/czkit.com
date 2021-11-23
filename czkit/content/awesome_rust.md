@@ -41,4 +41,7 @@ Rust的JSON库
 ### [rustc-version](https://github.com/djc/rustc-version-rs)
 获得当前rustc的版本
 
+### [num_cpus](https://github.com/seanmonstar/num_cpus)
+获得当前机器上有多少个CPU核
+
 
