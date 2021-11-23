@@ -33,6 +33,12 @@ Rust的JSON库
 ### [rocksdb](https://github.com/rust-rocksdb/rust-rocksdb)
 区块链都在用的rocksdb的rust的binding，是一个binding，不是rust重新实现
 
+
+## BlockChain
+
+### [tiny-bip39](https://docs.rs/tiny-bip39/0.8.2/bip39/)
+BIP39的Rust实现
+
 ## Utils
 
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
@@ -43,5 +49,8 @@ Rust的JSON库
 
 ### [num_cpus](https://github.com/seanmonstar/num_cpus)
 获得当前机器上有多少个CPU核
+
+
+
 
 
