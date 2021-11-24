@@ -17,6 +17,10 @@ title: "Awesome Rust"
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
+## Crypto
+### [ed25519-dalek](https://docs.rs/ed25519-dalek)
+ed25519 生成key、校验等功能
+
 ## Random
 ### [rand](https://github.com/rust-random/rand)
 非标准库中的随机数
