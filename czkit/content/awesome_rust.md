@@ -38,6 +38,10 @@ ed25519 生成key、校验等功能
 区块链都在用的rocksdb的rust的binding，是一个binding，不是rust重新实现
 
 
+## Syntax
+### [syn](https://docs.rs/syn)
+解析Rust的Token到Rust的语法书，比如在宏中使用
+
 ## BlockChain
 
 ### [tiny-bip39](https://docs.rs/tiny-bip39/0.8.2/bip39/)
