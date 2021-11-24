@@ -47,6 +47,9 @@ ed25519 生成key、校验等功能
 ### [tiny-bip39](https://docs.rs/tiny-bip39/0.8.2/bip39/)
 BIP39的Rust实现
 
+### [bs58](https://docs.rs/bs5)
+Base58实现
+
 ## Utils
 
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
