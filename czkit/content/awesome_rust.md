@@ -17,6 +17,10 @@ title: "Awesome Rust"
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
+### [bincode](https://docs.rs/bincode)
+类似Go里面的gob，一种二进制序列化策略
+
+
 ## Crypto
 ### [ed25519-dalek](https://docs.rs/ed25519-dalek)
 ed25519 生成key、校验等功能
