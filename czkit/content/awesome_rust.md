@@ -12,6 +12,10 @@ title: "Awesome Rust"
 ### [indicatif](https://github.com/mitsuhiko/indicatif)
 终端展示进度条，拥有各种风格
 
+## HTTP
+### [reqwest](https://docs.rs/reqwest)
+HTTP Client的一种实现
+
 ## Encoding
 
 ### [Serde JSON](https://github.com/serde-rs/json)
