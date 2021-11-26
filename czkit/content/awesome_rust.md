@@ -58,6 +58,10 @@ BIP39的Rust实现
 ### [bs58](https://docs.rs/bs5)
 Base58实现
 
+## Log
+### [env_logger](https://docs.rs/env_logger)
+通过环境变量控制的日志
+
 ## Utils
 
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
