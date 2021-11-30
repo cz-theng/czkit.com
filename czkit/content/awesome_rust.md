@@ -41,6 +41,9 @@ ed25519 生成key、校验等功能
 ### [actix](https://github.com/actix/actix)
 异步的web框架，基于tokio
 
+### [hyper](https://docs.rs/hyper)
+Rust实现的HTTP服务器，类似go的fasthttp
+
 ## DB
 ### [rocksdb](https://github.com/rust-rocksdb/rust-rocksdb)
 区块链都在用的rocksdb的rust的binding，是一个binding，不是rust重新实现
