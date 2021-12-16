@@ -22,6 +22,9 @@ HTTP Client的一种实现
 
 ## Encoding
 
+### [Bytes](https://docs.rs/bytes)
+byte操作
+
 ### [Serde JSON](https://github.com/serde-rs/json)
 Rust的JSON库
 
