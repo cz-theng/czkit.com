@@ -56,6 +56,10 @@ Rust实现的HTTP服务器，类似go的fasthttp
 区块链都在用的rocksdb的rust的binding，是一个binding，不是rust重新实现
 
 
+## Trace
+### [tracing](https://docs.rs/tracing)
+tokio出品，trace工具
+
 ## Syntax
 ### [syn](https://docs.rs/syn)
 解析Rust的Token到Rust的语法书，比如在宏中使用
