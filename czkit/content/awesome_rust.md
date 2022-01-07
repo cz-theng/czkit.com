@@ -76,6 +76,10 @@ Base58实现
 ### [env_logger](https://docs.rs/env_logger)
 通过环境变量控制的日志
 
+## Cache
+### [cached](https://docs.rs/cached)
+buffer 缓存
+
 ## Utils
 
 ### [git-version](https://github.com/fusion-engineering/rust-git-version)
