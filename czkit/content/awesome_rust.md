@@ -1,7 +1,13 @@
 ---
 title: "Awesome Rust"
 ---
+# 工程结构
+## 格式化
 
+### rustfmt.toml
+用于制定rust格式化的规则
+
+# 类库
 ## Console
 ### [clap](https://github.com/clap-rs/clap)
 命令行解析框架，做Flag解析
