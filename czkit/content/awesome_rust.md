@@ -22,9 +22,15 @@ title: "Awesome Rust"
 ### [net2](https://docs.rs/net2/latest/net2/)
 标准库net的补充，用于常见的tcp/udp socket操作
 
+### [socket2](https://crates.io/crates/socket2)
+net已经废弃了，新的用socket2
+
 ## HTTP
 ### [reqwest](https://docs.rs/reqwest)
 HTTP Client的一种实现
+
+### [hyper](https://crates.io/crates/hyper)
+更快的Http实现，包含了Http1和Http2
 
 ## Encoding
 
