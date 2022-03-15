@@ -18,6 +18,9 @@ title: "Awesome Rust"
 ### [indicatif](https://github.com/mitsuhiko/indicatif)
 终端展示进度条，拥有各种风格
 
+### [tui](https://github.com/fdehau/tui-rs)
+console的富UI终端显示
+
 ## Net
 ### [net2](https://docs.rs/net2/latest/net2/)
 标准库net的补充，用于常见的tcp/udp socket操作
