@@ -103,6 +103,9 @@ buffer 缓存
 ### [num_cpus](https://github.com/seanmonstar/num_cpus)
 获得当前机器上有多少个CPU核
 
+### [self_update](https://docs.rs/self_update/latest/self_update/)
+工程子更新，根据github信息更新到最新tag
+
 
 
 
